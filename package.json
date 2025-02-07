@@ -1,0 +1,71 @@
+{
+  "packageManager": "npm@10.9.0",
+  "name": "app",
+  "private": true,
+  "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "./node_modules/shakapacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "lint": "eslint 'app/**/*.{js,jsx,ts,tsx}'",
+    "lintfix": "eslint --fix 'app/**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.12.10",
+    "@babel/core": "^7.26.7",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/runtime": "^7.26.7",
+    "@types/babel__core": "^7.20.5",
+    "@types/webpack": "^5.28.5",
+    "axios": "^1.7.9",
+    "babel-loader": "^8.4.1",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "compression-webpack-plugin": "^9.2.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-storybook": "^0.6.7",
+    "eslint-plugin-testing-library": "^6.5.0",
+    "eslint-plugin-unused-imports": "^1.1.5",
+    "graphql": "^15.0",
+    "graphql-tag": "^2.8.0",
+    "jest": "^29",
+    "jest-environment-jsdom": "^29",
+    "lodash": "^4.17.5",
+    "mini-css-extract-plugin": "^2.9.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.0",
+    "react-dom": "^18.0",
+    "react-on-rails": "^14.0.4",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "shakapacker": "8.1.0",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
+    "webpack": "^5.97.1",
+    "webpack-assets-manifest": "^5.2.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.10.0"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "react-refresh": "^0.16.0",
+    "webpack-dev-server": "^4.15.2"
+  }
+}
