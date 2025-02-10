@@ -55,7 +55,7 @@ const createContact = ({ name, address, postalCode, city }) =>
     },
     authenticity_token: csrfToken()
   }, {
-    headers: { 'Accept': 'application/json' },
+    headers: { Accept: 'application/json' },
     responseType: 'json'
   })
 
@@ -67,7 +67,7 @@ const findNearDuplicates = ({ name, address, postalCode, city }) =>
       'contact[postal_code]': postalCode,
       'contact[city]': city
     },
-    headers: { 'Accept': 'application/json' },
+    headers: { Accept: 'application/json' },
     responseType: 'json'
   })
 
