@@ -12,6 +12,8 @@
     "defaults"
   ],
   "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
     "lint": "eslint 'app/**/*.{js,jsx,ts,tsx}'",
     "lintfix": "eslint --fix 'app/**/*.{js,jsx,ts,tsx}'"
   },
@@ -65,7 +67,36 @@
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "react-refresh": "^0.16.0",
     "webpack-dev-server": "^4.15.2"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "url": "http://localhost:3000"
+    },
+    "roots": [
+      "<rootDir>/app/javascript"
+    ],
+    "modulePaths": [
+      "<rootDir>/app/javascript"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/app/javascript/testConfig/jest.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/app/javascript/testConfig/fileModuleMock.js",
+      "\\.(css|scss|less)$": "<rootDir>/app/javascript/testConfig/styleModuleMock.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!uuid)"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
+    }
   }
 }

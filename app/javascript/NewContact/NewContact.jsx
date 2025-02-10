@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import AsyncEffect from '../AsyncEffect/AsyncEffect.jsx'
+import useAsyncEffect from '../hooks/useAsyncEffect.js'
 import capitalize from 'lodash/capitalize'
 import './NewContact.scss'
 
-const NewContact = ({ createContact, onSuccess }) => (
-  <AsyncEffect perform={createContact}>
-    { (perform, props) => <NewContactUI {...props} createContact={perform} onSuccess={onSuccess} /> }
-  </AsyncEffect>
-)
-
-const NewContactUI = ({ createContact, onSuccess, loading, data, error }) => {
+const NewContact = ({ createContact, onSuccess }) => {
   const [showForm, setShowForm] = useState(false)
+  const [performCreateContact, { loading, data, error }] = useAsyncEffect(createContact)
 
   useEffect(() => {
     if (data != null) {
@@ -29,17 +24,14 @@ const NewContactUI = ({ createContact, onSuccess, loading, data, error }) => {
       <button className='primary add-contact' disabled={loading} onClick={() => setShowForm(true)}>
         +
       </button>
-      { showForm && <NewContactForm createContact={createContact} onCancel={() => setShowForm(false)} /> }
+      { showForm && <NewContactForm createContact={performCreateContact} onCancel={() => setShowForm(false)} /> }
     </div>
   )
 }
 
-NewContactUI.propTypes = {
+NewContact.propTypes = {
   createContact: PropTypes.func.isRequired,
-  onSuccess: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.object,
-  data: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
+  onSuccess: PropTypes.func.isRequired
 }
 
 const NewContactForm = ({ createContact, onCancel }) => {
@@ -94,4 +86,4 @@ NewContactForm.propTypes = {
 }
 
 export default NewContact
-export { NewContactUI, NewContactForm }
+export { NewContactForm }

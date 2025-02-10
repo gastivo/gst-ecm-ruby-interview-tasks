@@ -54,36 +54,6 @@
     "camelcase": 0,
     "no-use-before-define": 0,
     "multiline-ternary": 0,
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      { "functions": false, "classes": false, "variables": false }
-    ],
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        "selector": "default",
-        "format": ["camelCase", "PascalCase"],
-        "leadingUnderscore": "allow",
-        "trailingUnderscore": "allow"
-      },
-      {
-        "selector": "property",
-        "format": null,
-        "leadingUnderscore": "allow",
-        "trailingUnderscore": "allow"
-      },
-      {
-        "selector": "typeLike",
-        "format": ["PascalCase"],
-        "leadingUnderscore": "allow"
-      },
-      {
-        "selector": "variableLike",
-        "format": ["camelCase", "PascalCase", "UPPER_CASE"],
-        "leadingUnderscore": "allow",
-        "trailingUnderscore": "allow"
-      }
-    ],
     "unused-imports/no-unused-imports": "error",
     "testing-library/await-async-queries": "error",
 		"testing-library/no-await-sync-queries": "error",
