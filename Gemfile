@@ -71,4 +71,4 @@ gem 'graphql-batch'
 
 gem 'shakapacker', '= 8.1'
 
-gem 'react_on_rails', '= 14.0.4'
+gem 'react_on_rails', '14.1.1'
