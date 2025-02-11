@@ -5,7 +5,7 @@ interview tasks for software developer jobs at Gastivo. Interview tasks are
 formulated as features to be implemented in this app, and will be provided to
 you after receiving your job application, along with detailed instructions.
 
-![Contact Book screenshot](https://raw.github.com/magaloop/contact_book/master/screenshot.png?1)
+![Contact Book screenshot](https://raw.github.com/gastivo/gst-ecm-ruby-interview-tasks/main/screenshot.png)
 
 When working on the interview task:
 
