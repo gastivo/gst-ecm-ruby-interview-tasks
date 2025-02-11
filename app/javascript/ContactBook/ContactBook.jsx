@@ -42,7 +42,8 @@ ContactBookUI.propTypes = {
   error: PropTypes.object,
   data: PropTypes.shape({
     data: PropTypes.array
-  })
+  }),
+  refetch: PropTypes.fn
 }
 
 const createContact = ({ name, address, postalCode, city }) =>
