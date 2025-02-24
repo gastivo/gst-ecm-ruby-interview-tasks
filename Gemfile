@@ -66,7 +66,7 @@ group :test do
 end
 
 gem 'graphql', '~> 2.4'
-gem 'graphiql-rails', '~> 1.8', group: :development
+gem 'graphiql-rails', '~> 1.10', group: :development
 gem 'graphql-batch'
 
 gem 'shakapacker', '= 8.1'
