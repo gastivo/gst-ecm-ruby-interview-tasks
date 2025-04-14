@@ -65,7 +65,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'graphql', '~> 2.4'
+gem 'graphql', '~> 2.5'
 gem 'graphiql-rails', '~> 1.8', group: :development
 gem 'graphql-batch'
 
