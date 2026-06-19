@@ -65,10 +65,13 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'graphql', '~> 2.4'
+gem 'graphql', '~> 2.6'
 gem 'graphiql-rails', '~> 1.8', group: :development
 gem 'graphql-batch'
 
 gem 'shakapacker', '= 8.1'
 
 gem 'react_on_rails', '14.1.1'
+# Temporary react_on_rails '14.1.1' is incompatible with connection-pool 3.+
+# remove this pin in Vite migration
+gem 'connection_pool', '<3.0'
