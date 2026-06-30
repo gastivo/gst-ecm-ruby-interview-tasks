@@ -131,8 +131,8 @@ GEM
       base64
       fiber-storage
       logger
-    graphql-batch (0.6.0)
-      graphql (>= 1.12.18, < 3)
+    graphql-batch (0.6.1)
+      graphql (>= 1.13, < 3)
       promise.rb (~> 0.7.2)
     guard (2.19.1)
       formatador (>= 0.2.4)
